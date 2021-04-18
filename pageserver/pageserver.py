@@ -92,7 +92,13 @@ def respond(sock):
     parts = request.split()
     if len(parts) > 1 and parts[0] == "GET":
         transmit(STATUS_OK, sock)
-        transmit(CAT, sock)
+        if parts[1].contains(".hmtl"):
+            if parts[1].contains("trivia.html"):
+                transmit("seriously", sock)
+            else:
+                transmit(STATUS_NOT_FOUND, sock)
+        else:
+            transmit(STATUS_FORBIDDEN,sock)
     else:
         log.info("Unhandled request: {}".format(request))
         transmit(STATUS_NOT_IMPLEMENTED, sock)
