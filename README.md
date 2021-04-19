@@ -82,28 +82,6 @@ Deployment should work "out of the box" with this command sequence:
   make stop
   ```
 
-* Alternatively, use the script under "tests" folder to test the
-expected outcomes in an automated fashion.
-It is accompanied by README file and comments (inside tests.sh)
-explaining how to test your code.
-* Check and revise your `credentials/credentials.ini` file.
-The autograder will read this. Be precise.
-The autograder IS NOT very good at guessing what you meant to write.
-* Turn in the `credentials.ini` file in Canvas.
-Autograder will use this file to access your GitHub repository.   
 
-### Grading Rubric ###
-
-* Your code works as expected: 100 points
-
-* For every wrong functionality (i.e., (a), (b), and (c) above),
-20 points will be docked off.
-
-* If none of the functionalities work, 40 points will be given.
-Assuming the credentials.ini is submitted with the correct URL of your repo.
-
-* If credentials.ini is missing, 0 will be assigned.
-
-### Credits ###
-
-Michal Young, Ram Durairajan, Steven Walton, Joe Istas.
+author:cheng cheng
+email:ccheng7@uoregon.edu
