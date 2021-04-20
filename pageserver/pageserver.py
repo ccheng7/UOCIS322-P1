@@ -90,10 +90,11 @@ def respond(sock):
     log.info("Request was {}\n***\n".format(request))
 
     parts = request.split()
+    website = "trivia.html"
     if len(parts) > 1 and parts[0] == "GET":
         transmit(STATUS_OK, sock)
-        if parts[1].contains(".hmtl"):
-            if parts[1].contains("trivia.html"):
+        if parts[1].find(".hmtl"):
+            if parts[1].find(website):
                 transmit("seriously", sock)
             else:
                 transmit(STATUS_NOT_FOUND, sock)
